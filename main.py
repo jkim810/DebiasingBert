@@ -96,8 +96,8 @@ class Bert(object):
         valid = [line.rstrip('\n') for line in open(valid_file)]
 
         # tokenize text
-        train_texts = [self.tokenize(sent) for sent in train][:10000]
-        valid_texts = [self.tokenize(sent) for sent in valid][:10000]
+        train_texts = [self.tokenize(sent) for sent in train]
+        valid_texts = [self.tokenize(sent) for sent in valid]
        
         # get one hot encoding ids for texts
         train_ids = [self.tokenizer.convert_tokens_to_ids(x) for x in train_texts]
